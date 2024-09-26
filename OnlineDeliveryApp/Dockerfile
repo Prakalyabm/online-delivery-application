@@ -1,14 +1,15 @@
-# OpenJDK image as the base image
+FROM ubuntu:latest AS build
+
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
+COPY . .
+
+RUN ./gradlew bootJar --no-daemon
+
 FROM openjdk:17-jdk-slim
 
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy the Maven build output (JAR file) to the container
-COPY --from=build /build/libs/OnlineDeliveryApp.jar app.jar
-
-# Expose the port your application will run on
 EXPOSE 8080
 
-# Run the application
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+COPY --from=build /build/libs/demo-1.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
