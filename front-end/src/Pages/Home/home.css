@@ -1,0 +1,9 @@
+.home-container1 {
+    display: flex;
+  }
+  
+  .home-container2 {
+    flex: 1;
+    margin-left: 250px; 
+  }
+  

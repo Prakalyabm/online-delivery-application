@@ -1,0 +1,149 @@
+.main-nav{
+  min-height :60px; 
+  width:100% ;
+  margin: 0% auto;
+  box-shadow: 0px 1px 5px #00000033;
+  z-index: 5;
+  top: 0%;
+  left: 0%;
+  background-color: #1e2020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar{
+  height: 100%;
+  min-width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-nav {
+  display: flex;
+  align-items: left;
+}
+
+.slide-in-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.slide-in-icon img {
+  filter: invert(1);
+  margin-right: 20px;
+  width: 25px;
+  height: auto;
+}
+
+.nav{
+  padding: 5px 20px;
+}
+
+.nav-logo {
+  width: 140px; 
+  height: auto; 
+  cursor: pointer;
+}
+
+.nav-item{
+  margin: 0px 3px;
+  font-size: small;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(69,69,69);
+  transition: 0.2s;
+}
+
+.navbar form{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.navbar form input{
+  min-width: 90%;
+  margin: 0;
+  padding: 8px 10px 8px 8px;
+  font-size: 13px;
+  border: solid 1px #0000003e;
+  border-radius: 3px;
+}
+
+.navbar form .search-icon{
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+}
+
+.nav-links{
+  padding: 8px 16px;
+  color: black;
+  background-color: rgb(240, 179, 65);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links:hover{
+  background-color: orange;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    min-width: 50%;
+  }
+
+  .navbar form {
+    margin: 10px 0;
+    width: 70%;
+  }
+
+  .nav-links {
+    padding: 8px 16px;
+    margin-left: 40px;;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar form input {
+    min-width: 80%;
+    font-size: 12px;
+  }
+
+  .navbar form .search-icon {
+    right: 10px;
+  }
+
+  .nav-links {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
