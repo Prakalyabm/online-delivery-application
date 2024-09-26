@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the Maven build output (JAR file) to the container
-COPY target/my-spring-boot-app.jar /app/app.jar
+COPY --from=build /build/libs/OnlineDeliveryApp.jar app.jar
 
 # Expose the port your application will run on
 EXPOSE 8080
